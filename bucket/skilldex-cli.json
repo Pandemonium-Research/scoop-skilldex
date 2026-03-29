@@ -1,0 +1,23 @@
+{
+  "version": "0.1.0",
+  "description": "Package manager and registry for Claude skill packages",
+  "homepage": "https://github.com/Pandemonium-Research/Skilldex",
+  "license": "MIT",
+  "url": "https://registry.npmjs.org/skilldex-cli/-/skilldex-cli-0.1.0.tgz",
+  "hash": "sha256:b1aaada5bb6a13df54eb838c0c9c6e03dcd44422d32718ff54291d781c172c52",
+  "extract_dir": "package",
+  "installer": {
+    "script": "npm install --prefix \"$dir\" --production --no-save \"$dir\""
+  },
+  "bin": [
+    ["node_modules/.bin/skillpm.cmd", "skillpm"],
+    ["node_modules/.bin/spm.cmd", "spm"]
+  ],
+  "checkver": {
+    "url": "https://registry.npmjs.org/skilldex-cli/latest",
+    "jsonpath": "$.version"
+  },
+  "autoupdate": {
+    "url": "https://registry.npmjs.org/skilldex-cli/-/skilldex-cli-$version.tgz"
+  }
+}
